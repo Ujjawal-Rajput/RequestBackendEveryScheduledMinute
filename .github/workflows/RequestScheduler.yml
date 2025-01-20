@@ -1,0 +1,16 @@
+name: Scheduled Request
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"  # Runs every 10 minutes
+
+jobs:
+  send_request:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send HTTP request and print response
+        run: |
+          response=$(curl -s "https://summarease-backend.onrender.com/api/test")
+          echo "Service Response: $response"
+          
