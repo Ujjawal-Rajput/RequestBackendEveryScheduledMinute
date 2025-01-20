@@ -11,6 +11,6 @@ jobs:
     steps:
       - name: Send HTTP request and print response
         run: |
-          response=$(curl -s "https://summarease-backend.onrender.com/api/test/")
+          response=$(curl -s "https://summarease-backend.onrender.com/api/test")
           echo "Service Response: $response"
           
